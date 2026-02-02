@@ -51,5 +51,11 @@ export default function Calculator() {
     setOperator(null);
   };
 
+  const clearAll = () => {
+    setCurrent("");
+    setPrevious("");
+    setOperator(null);
+  };
+
   return <div></div>;
 }
