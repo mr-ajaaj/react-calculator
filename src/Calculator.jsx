@@ -76,5 +76,11 @@ export default function Calculator() {
     { label: "+", type: "op" },
   ];
 
+  const handleClick = (btn) => {
+    if (btn.type === "num") appendNumber(btn.label);
+    if (btn.type === "op") chooseOperator(btn.label);
+    if (btn.type === "equal") calculate();
+  };
+
   return <div></div>;
 }
