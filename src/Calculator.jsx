@@ -17,5 +17,39 @@ export default function Calculator() {
     setCurrent("");
   };
 
+  const calculate = () => {
+    const a = parseFloat(previous);
+    const b = parseFloat(current);
+    if (isNaN(a) || isNaN(b)) return;
+
+    let result;
+    switch (operator) {
+      case "+":
+        result = a + b;
+        break;
+      case "-":
+        result = a - b;
+        break;
+      case "×":
+        result = a * b;
+        break;
+      case "÷":
+        if (b === 0) {
+          setCurrent("Error");
+          setPrevious("");
+          setOperator(null);
+          return;
+        }
+        result = a / b;
+        break;
+      default:
+        return;
+    }
+
+    setCurrent(result.toString());
+    setPrevious("");
+    setOperator(null);
+  };
+
   return <div></div>;
 }
