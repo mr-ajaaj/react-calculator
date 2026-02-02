@@ -57,5 +57,24 @@ export default function Calculator() {
     setOperator(null);
   };
 
+  const buttons = [
+    { label: "7", type: "num" },
+    { label: "8", type: "num" },
+    { label: "9", type: "num" },
+    { label: "÷", type: "op" },
+    { label: "4", type: "num" },
+    { label: "5", type: "num" },
+    { label: "6", type: "num" },
+    { label: "×", type: "op" },
+    { label: "1", type: "num" },
+    { label: "2", type: "num" },
+    { label: "3", type: "num" },
+    { label: "-", type: "op" },
+    { label: "0", type: "num" },
+    { label: ".", type: "num" },
+    { label: "=", type: "equal" },
+    { label: "+", type: "op" },
+  ];
+
   return <div></div>;
 }
